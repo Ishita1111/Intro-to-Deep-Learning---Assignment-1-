@@ -40,7 +40,7 @@ def parse_arguments():
                         choices=["sgd", "momentum", "nag", "rmsprop"],
                         help="Optimizer")
 
-    parser.add_argument("-lr", "--lr", type=float,
+    parser.add_argument("-lr", "--lr", "--learning_rate", type=float,
                         help="Learning rate")
 
     parser.add_argument("-wd", "--wd", type=float, default=0.0,

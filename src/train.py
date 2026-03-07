@@ -29,27 +29,18 @@ def parse_arguments():
     parser.add_argument("-o", "--optimizer", type=str, required=True,
                         choices=["sgd", "momentum", "nag", "rmsprop"])
 
-    parser.add_argument("-lr", "--lr", dest="lr", type=float, required=True,
+    parser.add_argument("-lr", "--lr", "--learning_rate",dest="lr",type=float,required=True,
                         help="Learning rate")
     parser.add_argument("-wd", "--wd", dest="wd", type=float, default=0.0,
                         help="Weight decay (L2 regularisation)")
 
-    parser.add_argument("-nhl", "--nhl", "--num_layers", dest="num_layers",
-                        type=int, required=True,
-                        help="Number of hidden layers")
-
-    parser.add_argument("-sz", "--sz", "--hidden_size", dest="hidden_size",
-                        nargs="+", type=int, required=False,
-                        help="Hidden layer size(s)")
+    parser.add_argument("-nhl", "--nhl", "--num_layers", dest="num_layers", type=int)
+    parser.add_argument("-sz", "--sz", "--hidden_size", dest="hidden_size", nargs="+", type=int)
+    parser.add_argument("-w_i", "--w_i", "--weight_init", dest="weight_init", choices=["random","xavier","zeroes"])
     
-
     parser.add_argument("-a", "--activation", type=str, required=True,
                         choices=["sigmoid", "tanh", "relu"],
                         help="Activation function")
-
-    parser.add_argument("-w_i", "--w_i", "--weight_init", dest="weight_init",
-                        choices=["random", "xavier", "zeroes"], required=True,
-                        help="Weight initialisation method")
 
     parser.add_argument("-wp", "--wandb_project", type=str, default="da6401-assignment1")
 
