@@ -140,25 +140,45 @@ class NeuralNetwork:
         """
         Load weights into the network layers.
         """
-        # Case: {"W":[...], "b":[...]}
+        print("DEBUG weights type:", type(weights))
+
+        if isinstance(weights, dict):
+            print("DEBUG dict keys:", weights.keys())
+        
+        # Case 1: dict with W,b lists
         if isinstance(weights, dict) and "W" in weights and "b" in weights:
             for i, layer in enumerate(self.layers):
                 layer.W = weights["W"][i]
                 layer.b = weights["b"][i]
             return
 
-        # Case: [(W,b), (W,b)]
-        if isinstance(weights, list) and isinstance(weights[0], (tuple, list)):
-            for layer, w in zip(self.layers, weights):
-                layer.W = w[0]
-                layer.b = w[1]
+        # Case 2: dict of layers
+        if isinstance(weights, dict):
+            values = list(weights.values())
+
+            for layer, w in zip(self.layers, values):
+
+                if isinstance(w, dict):
+                    if "W" in w and "b" in w:
+                        layer.W = w["W"]
+                        layer.b = w["b"]
+                    elif "weights" in w and "bias" in w:
+                        layer.W = w["weights"]
+                        layer.b = w["bias"]
+                    else:
+                        raise ValueError("Unknown weight dict structure")
+
             return
 
-        # Case: [{"W":...,"b":...}]
-        if isinstance(weights, list) and isinstance(weights[0], dict):
+        # Case 3: list of tuples/lists
+        if isinstance(weights, list):
             for layer, w in zip(self.layers, weights):
-                layer.W = w["W"]
-                layer.b = w["b"]
+                if isinstance(w, (tuple, list)):
+                    layer.W = w[0]
+                    layer.b = w[1]
+                elif isinstance(w, dict):
+                    layer.W = w.get("W", w.get("weights"))
+                    layer.b = w.get("b", w.get("bias"))
             return
 
         raise ValueError(f"Unsupported weight format: {type(weights)}")
