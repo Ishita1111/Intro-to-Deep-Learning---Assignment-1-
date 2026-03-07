@@ -124,22 +124,25 @@ def main():
     """
     args = parse_arguments()
 
-    models_dir = os.path.dirname(os.path.abspath(__file__))
+    models_dir = os.path.dirname(__file__)
     config_path = os.path.join(models_dir, "best_config.json")
     weights_path = os.path.join(models_dir, "best_model.npy")
 
+    # Fill missing args from best_config
     if os.path.exists(config_path):
 
         with open(config_path, "r") as f:
             saved_config = json.load(f)
 
-        # Fill missing args from best_config
         for key, value in saved_config.items():
             if getattr(args, key, None) is None:
                 setattr(args, key, value)
 
         print("Filled missing arguments using best_config.json")
-        
+
+    # DEBUG (optional)
+    print("ARGS AFTER FILL:", args)
+
     # Load test split
     _, _, X_test, y_test_raw = load_dataset(args.dataset)
 
@@ -151,8 +154,9 @@ def main():
     # Reconstruct model and inject saved weights
     model = NeuralNetwork(args)
     weights = load_model(weights_path)
+    if isinstance(weights, dict) and "weights" in weights:
+        weights = weights["weights"]
     model.set_weights(weights)
-
     results = evaluate_model(model, X_test, y_test)
 
     y_pred = np.argmax(results["logits"], axis=1)
