@@ -137,15 +137,30 @@ class NeuralNetwork:
         return weights
 
     def set_weights(self, weights):
-        print("DEBUG weights type:", type(weights))
+        if isinstance(weights, dict):
+            for i, layer in enumerate(self.layers):
+                layer.W = weights["W"][i]
+                layer.b = weights["b"][i]
+            return
 
-        try:
-            print("DEBUG first element:", weights[0])
-            print("DEBUG first element type:", type(weights[0]))
-        except Exception as e:
-            print("DEBUG could not index weights:", e)
+        if isinstance(weights, list):
 
-    raise ValueError("Debug stop")
+            for layer, w in zip(self.layers, weights):
+
+                if isinstance(w, dict):
+                    layer.W = w["W"]
+                    layer.b = w["b"]
+
+                elif isinstance(w, (tuple, list)):
+                    layer.W = w[0]
+                    layer.b = w[1]
+
+                else:
+                    raise ValueError(f"Unknown weight entry type: {type(w)}")
+
+            return
+
+        raise ValueError(f"Unsupported weight format: {type(weights)}")
 
     def train(self, X_train, y_train, epochs, batch_size, log_gradients=False):
 
