@@ -9,7 +9,7 @@
     "num_layers": 2,
     "hidden_size": [
         128,
-        64
+        128
     ],
     "activation": "relu",
     "weight_init": "xavier",
