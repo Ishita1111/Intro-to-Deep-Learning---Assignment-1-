@@ -139,10 +139,21 @@ class NeuralNetwork:
     def set_weights(self, weights):
         """
         Load weights into the network layers.
+        Supports multiple formats used by the autograder.
         """
         for layer, w in zip(self.layers, weights):
-            layer.W = w["W"]
-            layer.b = w["b"]
+            # case 1: dict format 
+            if isinstance(w, dict):
+                layer.W = w["W"]
+                layer.b = w["b"]
+
+            # case 2: tuple format 
+            elif isinstance(w, (list, tuple)):
+                layer.W = w[0]
+                layer.b = w[1]
+
+            else:
+                raise ValueError("Unsupported weight format")
 
     def train(self, X_train, y_train, epochs, batch_size, log_gradients=False):
 
