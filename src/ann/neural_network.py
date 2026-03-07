@@ -27,6 +27,8 @@ class NeuralNetwork:
         self.layers = []
         self.activations = []
 
+        print("DEBUG CLI ARGS:", cli_args)
+
         input_dim = 784  # MNIST / Fashion-MNIST flattened
         hidden_sizes = cli_args.hidden_size
         num_layers = cli_args.num_layers
