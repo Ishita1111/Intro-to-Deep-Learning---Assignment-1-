@@ -137,23 +137,15 @@ class NeuralNetwork:
         return weights
 
     def set_weights(self, weights):
-        """
-        Load weights into the network layers.
-        Supports multiple formats used by the autograder.
-        """
-        for layer, w in zip(self.layers, weights):
-            # case 1: dict format 
-            if isinstance(w, dict):
-                layer.W = w["W"]
-                layer.b = w["b"]
+        print("DEBUG weights type:", type(weights))
 
-            # case 2: tuple format 
-            elif isinstance(w, (list, tuple)):
-                layer.W = w[0]
-                layer.b = w[1]
+        try:
+            print("DEBUG first element:", weights[0])
+            print("DEBUG first element type:", type(weights[0]))
+        except Exception as e:
+            print("DEBUG could not index weights:", e)
 
-            else:
-                raise ValueError("Unsupported weight format")
+    raise ValueError("Debug stop")
 
     def train(self, X_train, y_train, epochs, batch_size, log_gradients=False):
 
