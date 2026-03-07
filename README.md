@@ -40,6 +40,14 @@ initialization strategies.
 
 ------------------------------------------------------------------------
 
+### SUBMISSION
+
+Github Repo : https://github.com/Ishita1111/Intro-to-Deep-Learning---Assignment-1-/tree/main
+
+Wandb Report : https://wandb.ai/me22b134-indian-institute-of-technology-madras/da6401-assignment1/reports/DA6701-INTRODUCTION-TO-DEEP-LEARNING--VmlldzoxNjAyMTE0Mw?accessToken=1u20pvx8ttr6s4t02zavvkjmypzefsvi1rl8k7tp3vcknqp7v2udtpucvi2sw2nk
+
+------------------------------------------------------------------------
+
 ## Features
 
 ### Activation Functions

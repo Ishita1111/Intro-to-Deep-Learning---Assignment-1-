@@ -33,6 +33,17 @@ class NeuralNetwork:
         hidden_sizes = cli_args.hidden_size
         num_layers = cli_args.num_layers
 
+        hidden_sizes = cli_args.hidden_size
+        num_layers = cli_args.num_layers
+
+        # fallback if args are None
+        if hidden_sizes is None:
+            hidden_sizes = [64, 64]
+
+        if num_layers is None:
+            num_layers = len(hidden_sizes)
+
+        # ensure list format
         if isinstance(hidden_sizes, int):
             hidden_sizes = [hidden_sizes] * num_layers
 
