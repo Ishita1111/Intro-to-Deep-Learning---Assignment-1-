@@ -124,23 +124,22 @@ def main():
     """
     args = parse_arguments()
 
-    models_dir = os.path.dirname(__file__)
-
+    models_dir = os.path.dirname(os.path.abspath(__file__))
     config_path = os.path.join(models_dir, "best_config.json")
     weights_path = os.path.join(models_dir, "best_model.npy")
 
-    # If no CLI arguments - load best config
-    if len(sys.argv) == 1:
+    if os.path.exists(config_path):
 
-        if not os.path.exists(config_path) or not os.path.exists(weights_path):
-            raise ValueError("No saved best model found in src directory.")
         with open(config_path, "r") as f:
             saved_config = json.load(f)
 
-        args = argparse.Namespace(**saved_config)
-        args.wandb_project = "da6401-assignment1"
-        print("Loaded best model configuration automatically.")
+        # Fill missing args from best_config
+        for key, value in saved_config.items():
+            if getattr(args, key, None) is None:
+                setattr(args, key, value)
 
+        print("Filled missing arguments using best_config.json")
+        
     # Load test split
     _, _, X_test, y_test_raw = load_dataset(args.dataset)
 
