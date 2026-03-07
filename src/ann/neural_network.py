@@ -137,27 +137,28 @@ class NeuralNetwork:
         return weights
 
     def set_weights(self, weights):
-        if isinstance(weights, dict):
+        """
+        Load weights into the network layers.
+        """
+        # Case: {"W":[...], "b":[...]}
+        if isinstance(weights, dict) and "W" in weights and "b" in weights:
             for i, layer in enumerate(self.layers):
                 layer.W = weights["W"][i]
                 layer.b = weights["b"][i]
             return
 
-        if isinstance(weights, list):
-
+        # Case: [(W,b), (W,b)]
+        if isinstance(weights, list) and isinstance(weights[0], (tuple, list)):
             for layer, w in zip(self.layers, weights):
+                layer.W = w[0]
+                layer.b = w[1]
+            return
 
-                if isinstance(w, dict):
-                    layer.W = w["W"]
-                    layer.b = w["b"]
-
-                elif isinstance(w, (tuple, list)):
-                    layer.W = w[0]
-                    layer.b = w[1]
-
-                else:
-                    raise ValueError(f"Unknown weight entry type: {type(w)}")
-
+        # Case: [{"W":...,"b":...}]
+        if isinstance(weights, list) and isinstance(weights[0], dict):
+            for layer, w in zip(self.layers, weights):
+                layer.W = w["W"]
+                layer.b = w["b"]
             return
 
         raise ValueError(f"Unsupported weight format: {type(weights)}")
