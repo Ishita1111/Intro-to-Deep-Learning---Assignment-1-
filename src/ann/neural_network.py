@@ -167,11 +167,14 @@ class NeuralNetwork:
 
                 if log_gradients and global_step < 50:
                     layer = self.layers[0]  # first hidden layer
-                    neuron_ids = [0, 1, 2, 3, 4]
+                    num_neurons = layer.grad_W.shape[1]
+                    neuron_ids = list(range(min(5, num_neurons)))
+
                     log_dict = {"iteration": global_step}
+
                     for nid in neuron_ids:
                         grad_vector = layer.grad_W[:, nid]
-                        log_dict[f"neuron_{nid}_grad"] = np.linalg.norm(grad_vector)
+                        log_dict[f"neuron_{nid}_grad"] = np.linalg.norm(grad_vector)    
                     
 #                    wandb.log(log_dict)
 

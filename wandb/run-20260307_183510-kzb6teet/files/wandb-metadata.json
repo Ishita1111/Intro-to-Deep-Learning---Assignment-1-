@@ -1,0 +1,57 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "3.7.9",
+  "startedAt":  "2026-03-07T13:05:10.427548Z",
+  "args":  [
+    "--dataset",
+    "mnist",
+    "--epochs",
+    "3",
+    "--batch_size",
+    "32",
+    "--learning_rate",
+    "0.01",
+    "--optimizer",
+    "sgd",
+    "--num_layers",
+    "2",
+    "--hidden_size",
+    "3",
+    "2",
+    "--activation",
+    "relu",
+    "--loss",
+    "cross_entropy",
+    "--weight_init",
+    "xavier",
+    "--wandb_project",
+    "da6401-assignment1"
+  ],
+  "program":  "src/train.py",
+  "codePath":  "src\\train.py",
+  "git":  {
+    "remote":  "https://github.com/Ishita1111/Intro-to-Deep-Learning---Assignment-1-.git",
+    "commit":  "4a707a2694e1f0830dbe8acfe34576a4a2439fd9"
+  },
+  "email":  "me22b134@smail.iitm.ac.in",
+  "root":  "D:\\IITM Acads\\SEM 8\\FoDL\\A1",
+  "host":  "Ishita",
+  "username":  "91829",
+  "executable":  "C:\\Users\\91829\\Python\\python.exe",
+  "codePathLocal":  "src\\train.py",
+  "cpu_count":  10,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "221249466368",
+      "used":  "65108004864"
+    }
+  },
+  "memory":  {
+    "total":  "16849293312"
+  },
+  "cpu":  {
+    "count":  10,
+    "countLogical":  12
+  }
+}

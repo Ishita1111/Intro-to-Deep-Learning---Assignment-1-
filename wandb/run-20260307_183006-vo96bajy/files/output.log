@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "src/train.py", line 267, in <module>
+    main()
+  File "src/train.py", line 124, in main
+    loss, grad_norm = model.train(X_train, y_train, epochs=1, batch_size=config.batch_size, log_gradients=True)
+  File "D:\IITM Acads\SEM 8\FoDL\A1\src\ann\neural_network.py", line 173, in train
+    grad_vector = layer.grad_W[:, nid]
+IndexError: index 3 is out of bounds for axis 1 with size 3

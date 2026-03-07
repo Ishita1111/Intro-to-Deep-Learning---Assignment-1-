@@ -1,0 +1,26 @@
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Configure stats pid to 51560
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Loading settings from C:\Users\91829\.config\wandb\settings
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Loading settings from D:\IITM Acads\SEM 8\FoDL\A1\wandb\settings
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'src\\train.py', 'program_abspath': 'D:\\IITM Acads\\SEM 8\\FoDL\\A1\\src\\train.py', 'program': 'src/train.py'}
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_setup.py:_flush():79] Applying login settings: {}
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_init.py:_log_setup():533] Logging user logs to D:\IITM Acads\SEM 8\FoDL\A1\wandb\run-20260307_183429-mfj2wn35\logs\debug.log
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_init.py:_log_setup():534] Logging internal logs to D:\IITM Acads\SEM 8\FoDL\A1\wandb\run-20260307_183429-mfj2wn35\logs\debug-internal.log
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_init.py:init():619] calling init triggers
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_init.py:init():627] wandb.init called with sweep_config: {}
+config: {'dataset': 'mnist', 'epochs': 3, 'batch_size': 32, 'loss': 'cross_entropy', 'optimizer': 'sgd', 'lr': 0.01, 'wd': 0.0, 'num_layers': 2, 'hidden_size': [3, 2], 'weight_init': 'xavier', 'activation': 'relu', 'wandb_project': 'da6401-assignment1'}
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_init.py:init():669] starting backend
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [wandb_init.py:init():673] sending inform_init request
+2026-03-07 18:34:29,649 INFO    MainThread:51560 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2026-03-07 18:34:29,663 INFO    MainThread:51560 [wandb_init.py:init():686] backend started and connected
+2026-03-07 18:34:29,670 INFO    MainThread:51560 [wandb_init.py:init():781] updated telemetry
+2026-03-07 18:34:29,780 INFO    MainThread:51560 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2026-03-07 18:34:30,402 INFO    MainThread:51560 [wandb_init.py:init():867] starting run threads in backend
+2026-03-07 18:34:30,789 INFO    MainThread:51560 [wandb_run.py:_console_start():2456] atexit reg
+2026-03-07 18:34:30,790 INFO    MainThread:51560 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2026-03-07 18:34:30,790 INFO    MainThread:51560 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2026-03-07 18:34:30,790 INFO    MainThread:51560 [wandb_run.py:_redirect():2395] Redirects installed.
+2026-03-07 18:34:30,795 INFO    MainThread:51560 [wandb_init.py:init():911] run started, returning control to user process
+2026-03-07 18:34:32,496 WARNING MsgRouterThr:51560 [router.py:message_loop():75] message_loop has been closed

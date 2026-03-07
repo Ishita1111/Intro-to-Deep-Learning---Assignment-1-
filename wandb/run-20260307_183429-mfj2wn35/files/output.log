@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "src/train.py", line 267, in <module>
+    main()
+  File "src/train.py", line 136, in main
+    test_f1 = compute_f1_score(y_true, y_pred, average="macro")
+TypeError: compute_f1_score() got an unexpected keyword argument 'average'

@@ -1,0 +1,32 @@
+2026-03-07 18:35:10,414 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2026-03-07 18:35:10,414 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Configure stats pid to 56012
+2026-03-07 18:35:10,415 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Loading settings from C:\Users\91829\.config\wandb\settings
+2026-03-07 18:35:10,415 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Loading settings from D:\IITM Acads\SEM 8\FoDL\A1\wandb\settings
+2026-03-07 18:35:10,415 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2026-03-07 18:35:10,415 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2026-03-07 18:35:10,416 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'src\\train.py', 'program_abspath': 'D:\\IITM Acads\\SEM 8\\FoDL\\A1\\src\\train.py', 'program': 'src/train.py'}
+2026-03-07 18:35:10,417 INFO    MainThread:56012 [wandb_setup.py:_flush():79] Applying login settings: {}
+2026-03-07 18:35:10,417 INFO    MainThread:56012 [wandb_init.py:_log_setup():533] Logging user logs to D:\IITM Acads\SEM 8\FoDL\A1\wandb\run-20260307_183510-kzb6teet\logs\debug.log
+2026-03-07 18:35:10,417 INFO    MainThread:56012 [wandb_init.py:_log_setup():534] Logging internal logs to D:\IITM Acads\SEM 8\FoDL\A1\wandb\run-20260307_183510-kzb6teet\logs\debug-internal.log
+2026-03-07 18:35:10,418 INFO    MainThread:56012 [wandb_init.py:init():619] calling init triggers
+2026-03-07 18:35:10,418 INFO    MainThread:56012 [wandb_init.py:init():627] wandb.init called with sweep_config: {}
+config: {'dataset': 'mnist', 'epochs': 3, 'batch_size': 32, 'loss': 'cross_entropy', 'optimizer': 'sgd', 'lr': 0.01, 'wd': 0.0, 'num_layers': 2, 'hidden_size': [3, 2], 'weight_init': 'xavier', 'activation': 'relu', 'wandb_project': 'da6401-assignment1'}
+2026-03-07 18:35:10,418 INFO    MainThread:56012 [wandb_init.py:init():669] starting backend
+2026-03-07 18:35:10,418 INFO    MainThread:56012 [wandb_init.py:init():673] sending inform_init request
+2026-03-07 18:35:10,423 INFO    MainThread:56012 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2026-03-07 18:35:10,426 INFO    MainThread:56012 [wandb_init.py:init():686] backend started and connected
+2026-03-07 18:35:10,437 INFO    MainThread:56012 [wandb_init.py:init():781] updated telemetry
+2026-03-07 18:35:10,545 INFO    MainThread:56012 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2026-03-07 18:35:11,095 INFO    MainThread:56012 [wandb_init.py:init():867] starting run threads in backend
+2026-03-07 18:35:11,932 INFO    MainThread:56012 [wandb_run.py:_console_start():2456] atexit reg
+2026-03-07 18:35:11,933 INFO    MainThread:56012 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2026-03-07 18:35:11,933 INFO    MainThread:56012 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2026-03-07 18:35:11,933 INFO    MainThread:56012 [wandb_run.py:_redirect():2395] Redirects installed.
+2026-03-07 18:35:11,939 INFO    MainThread:56012 [wandb_init.py:init():911] run started, returning control to user process
+2026-03-07 18:35:16,368 INFO    MainThread:56012 [wandb_run.py:_finish():2155] finishing run me22b134-indian-institute-of-technology-madras/da6401-assignment1/kzb6teet
+2026-03-07 18:35:16,369 INFO    MainThread:56012 [wandb_run.py:_atexit_cleanup():2420] got exitcode: 0
+2026-03-07 18:35:16,369 INFO    MainThread:56012 [wandb_run.py:_restore():2402] restore
+2026-03-07 18:35:16,369 INFO    MainThread:56012 [wandb_run.py:_restore():2408] restore done
+2026-03-07 18:35:22,866 INFO    MainThread:56012 [wandb_run.py:_footer_history_summary_info():3960] rendering history
+2026-03-07 18:35:22,866 INFO    MainThread:56012 [wandb_run.py:_footer_history_summary_info():3992] rendering summary
+2026-03-07 18:35:22,866 INFO    MainThread:56012 [wandb_run.py:_footer_sync_info():3921] logging synced files

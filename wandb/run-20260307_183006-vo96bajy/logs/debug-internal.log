@@ -1,0 +1,16 @@
+{"time":"2026-03-07T18:30:06.9513816+05:30","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2026-03-07T18:30:06.9513816+05:30","level":"INFO","msg":"created symlink","path":"D:\\IITM Acads\\SEM 8\\FoDL\\A1\\wandb\\run-20260307_183006-vo96bajy\\logs\\debug-core.log"}
+{"time":"2026-03-07T18:30:07.093902+05:30","level":"INFO","msg":"created new stream","id":"vo96bajy"}
+{"time":"2026-03-07T18:30:07.093902+05:30","level":"INFO","msg":"stream: started","id":"vo96bajy"}
+{"time":"2026-03-07T18:30:07.093902+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"vo96bajy"}
+{"time":"2026-03-07T18:30:07.093902+05:30","level":"INFO","msg":"sender: started","stream_id":"vo96bajy"}
+{"time":"2026-03-07T18:30:07.093902+05:30","level":"INFO","msg":"handler: started","stream_id":"vo96bajy"}
+{"time":"2026-03-07T18:30:07.7353755+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-07T18:30:09.2315511+05:30","level":"INFO","msg":"stream: closing","id":"vo96bajy"}
+{"time":"2026-03-07T18:30:09.2315511+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-07T18:30:09.2328716+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-07T18:30:14.2865379+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-07T18:30:14.6431423+05:30","level":"INFO","msg":"handler: closed","stream_id":"vo96bajy"}
+{"time":"2026-03-07T18:30:14.6431423+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"vo96bajy"}
+{"time":"2026-03-07T18:30:14.6431423+05:30","level":"INFO","msg":"sender: closed","stream_id":"vo96bajy"}
+{"time":"2026-03-07T18:30:14.6469054+05:30","level":"INFO","msg":"stream: closed","id":"vo96bajy"}

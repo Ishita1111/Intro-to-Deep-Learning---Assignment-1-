@@ -1,0 +1,16 @@
+{"time":"2026-03-07T18:34:29.6692436+05:30","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2026-03-07T18:34:29.6692436+05:30","level":"INFO","msg":"created symlink","path":"D:\\IITM Acads\\SEM 8\\FoDL\\A1\\wandb\\run-20260307_183429-mfj2wn35\\logs\\debug-core.log"}
+{"time":"2026-03-07T18:34:29.8122671+05:30","level":"INFO","msg":"created new stream","id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:29.8129282+05:30","level":"INFO","msg":"stream: started","id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:29.8129282+05:30","level":"INFO","msg":"handler: started","stream_id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:29.8129282+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:29.8129282+05:30","level":"INFO","msg":"sender: started","stream_id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:30.4135527+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2026-03-07T18:34:32.4962951+05:30","level":"INFO","msg":"stream: closing","id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:32.4962951+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2026-03-07T18:34:32.5005553+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2026-03-07T18:34:33.9131648+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-07T18:34:34.3590825+05:30","level":"INFO","msg":"handler: closed","stream_id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:34.3596766+05:30","level":"INFO","msg":"sender: closed","stream_id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:34.3590825+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"mfj2wn35"}
+{"time":"2026-03-07T18:34:34.3640657+05:30","level":"INFO","msg":"stream: closed","id":"mfj2wn35"}

@@ -79,7 +79,7 @@ def main():
 
     # project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     # models_dir = os.path.join(project_root, "models")
-    models_dir = os.path.dirname(__file__)
+    models_dir = os.path.dirname(os.path.abspath(__file__))
     os.makedirs(models_dir, exist_ok=True)
 
     # If no CLI args provided, load best saved config
@@ -89,6 +89,7 @@ def main():
             with open(config_path, "r") as f:
                 saved_config = json.load(f)
             args = argparse.Namespace(**saved_config)
+            args.wandb_project = "da6401-assignment1"
             print("Loaded best config from models folder.")
         else:
             raise ValueError("No saved best_config.json found.")
@@ -132,7 +133,7 @@ def main():
         else:
             y_true = y_test
 
-        test_f1 = compute_f1_score(y_true, y_pred, average="macro")
+        test_f1 = compute_f1_score(y_true, y_pred)
         log_dict = {
             "epoch": epoch + 1,
             "train_loss": loss,
