@@ -31,6 +31,9 @@ class NeuralNetwork:
         hidden_sizes = cli_args.hidden_size
         num_layers = cli_args.num_layers
 
+        if isinstance(hidden_sizes, int):
+            hidden_sizes = [hidden_sizes] * num_layers
+
         # activation choice
         if cli_args.activation == "sigmoid":
             act_class = Sigmoid
@@ -62,13 +65,15 @@ class NeuralNetwork:
         else:
             self.loss_fn = CrossEntropy()
 
-        # optimizer (single object handling all layers)
+        lr = getattr(cli_args, "lr", None)
+        if lr is None:
+            lr = getattr(cli_args, "learning_rate", 0.001)
+
         self.optimizer = Optimizer(
-            lr=cli_args.lr,
+            lr=lr,  
             weight_decay=getattr(cli_args, 'wd', 0.0),
             optimizer_type=cli_args.optimizer
         )
-
         # Will be populated after each backward() call:
         # list of (grad_W, grad_b) tuples, one per layer, in forward order.
         self.grads = []
