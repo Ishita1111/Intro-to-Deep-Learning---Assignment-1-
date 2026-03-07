@@ -170,28 +170,28 @@ class NeuralNetwork:
     #         return
     #     raise ValueError("Unsupported weight format")
 
-        def set_weights(self, weights):
+    def set_weights(self, weights):
 
-            if isinstance(weights, dict) and "weights" in weights:
-                weights = weights["weights"]
+        if isinstance(weights, dict) and "weights" in weights:
+            weights = weights["weights"]
 
-            if isinstance(weights, dict):
-                for i, layer in enumerate(self.layers):
-                    W_key = f"W{i}"
-                    b_key = f"b{i}"
-                    if W_key in weights and b_key in weights:
-                        layer.W = weights[W_key]
-                        layer.b = weights[b_key]
-                    else:
-                        raise ValueError("Missing weight keys")
-                return
+        if isinstance(weights, dict):
+            for i, layer in enumerate(self.layers):
+                W_key = f"W{i}"
+                b_key = f"b{i}"
+                if W_key in weights and b_key in weights:
+                    layer.W = weights[W_key]
+                    layer.b = weights[b_key]
+                else:
+                    raise ValueError("Missing weight keys")
+            return
 
-            if isinstance(weights, list):
-                for layer, w in zip(self.layers, weights):
-                    layer.W = w["W"]
-                    layer.b = w["b"]
-                return
-            raise ValueError(f"Unsupported weight format: {type(weights)}")
+        if isinstance(weights, list):
+            for layer, w in zip(self.layers, weights):
+                layer.W = w["W"]
+                layer.b = w["b"]
+            return
+        raise ValueError(f"Unsupported weight format: {type(weights)}")
 
     def train(self, X_train, y_train, epochs, batch_size, log_gradients=False):
 
