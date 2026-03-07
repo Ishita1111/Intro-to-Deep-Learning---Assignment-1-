@@ -113,10 +113,11 @@ class NeuralNetwork:
             grad = self.activations[i].backward(grad)
             grad = self.layers[i].backward(grad)
 
-        # Collect gradients for verification
         self.grads = [(layer.grad_W, layer.grad_b) for layer in self.layers]
+        grad_W_list = [layer.grad_W for layer in self.layers]
+        grad_b_list = [layer.grad_b for layer in self.layers]
 
-        return self.grads
+        return grad_W_list, grad_b_list
 
     def update_weights(self):
         """
